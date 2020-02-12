@@ -3,7 +3,7 @@ FROM debian:10.2-slim as base
 RUN grep 'nobody' /etc/passwd > /tmp/passwd
 RUN grep 'nogroup' /etc/group > /tmp/group
 
-RUN apt-get update && apt-get install -y ca-certificates tzdata
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates tzdata
 
 FROM scratch
 
