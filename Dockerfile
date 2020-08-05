@@ -1,4 +1,4 @@
-FROM debian:10.2-slim as base
+FROM debian:10.5-slim as base
 
 RUN grep 'nobody' /etc/passwd > /tmp/passwd
 RUN grep 'nogroup' /etc/group > /tmp/group
